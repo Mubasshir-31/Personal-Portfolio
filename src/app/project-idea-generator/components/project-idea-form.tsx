@@ -32,7 +32,7 @@ export function ProjectIdeaForm() {
     },
   });
 
-  const exampleTechnologies = ['Next.js', 'Genkit', 'Python', 'Firebase', 'Tailwind CSS', 'TypeScript'];
+  const exampleTechnologies = ['Next.js', 'Genkit', 'Python', 'Firebase', 'Tailwind CSS', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'MongoDB'];
 
   function handleExampleClick(tech: string) {
     const currentTechs = form.getValues('technologies');
