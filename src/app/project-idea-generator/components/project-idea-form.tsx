@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Loader2, Sparkles, Wand2, Lightbulb } from 'lucide-react';
+import { Loader2, Sparkles, Wand2, Lightbulb, Tag } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,6 +13,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { getProjectIdeas } from '../actions';
 import type { ProjectIdeaGeneratorOutput } from '@/ai/flows/project-idea-generator';
+import { Badge } from '@/components/ui/badge';
 
 const formSchema = z.object({
   technologies: z.string().min(2, 'Please enter at least one technology.'),
@@ -21,6 +22,7 @@ const formSchema = z.object({
 export function ProjectIdeaForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ProjectIdeaGeneratorOutput | null>(null);
+  const [submittedTechnologies, setSubmittedTechnologies] = useState('');
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -33,6 +35,7 @@ export function ProjectIdeaForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     setResult(null);
+    setSubmittedTechnologies(values.technologies);
 
     const response = await getProjectIdeas(values);
 
@@ -96,7 +99,7 @@ export function ProjectIdeaForm() {
           <CardTitle className="flex items-center gap-2"><Sparkles className="text-accent" /> AI-Generated Project Ideas</CardTitle>
           <CardDescription>Here are a few project ideas to inspire you.</CardDescription>
         </CardHeader>
-        <CardContent className="flex-grow">
+        <CardContent className="flex-grow flex flex-col">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
               <Loader2 className="w-12 h-12 animate-spin mb-4" />
@@ -109,13 +112,23 @@ export function ProjectIdeaForm() {
             </div>
           )}
           {result && (
-            <div className="space-y-6 animate-fade-in">
-              {result.projectIdeas.map((idea, index) => (
-                <div key={index} className="space-y-2">
-                  <h3 className="font-semibold text-lg text-primary flex items-center gap-2"><Lightbulb className="w-5 h-5" /> {idea.title}</h3>
-                  <p className="text-foreground/90">{idea.description}</p>
+            <div className="space-y-6 animate-fade-in flex-grow flex flex-col">
+              <div className="space-y-2">
+                <h4 className="font-semibold text-md text-primary flex items-center gap-2"><Tag className="w-4 h-4" /> Technologies</h4>
+                <div className="flex flex-wrap gap-2">
+                  {submittedTechnologies.split(',').map(tech => tech.trim()).filter(tech => tech).map(tech => (
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="flex-grow space-y-6">
+                {result.projectIdeas.map((idea, index) => (
+                  <div key={index} className="space-y-2">
+                    <h3 className="font-semibold text-lg text-primary flex items-center gap-2"><Lightbulb className="w-5 h-5" /> {idea.title}</h3>
+                    <p className="text-foreground/90">{idea.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </CardContent>
