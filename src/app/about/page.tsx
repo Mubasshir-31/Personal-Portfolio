@@ -16,7 +16,7 @@ export default function About() {
             <CardContent className="p-0">
               <div className="relative aspect-square">
                  <Image
-                  src="https://i.postimg.cc/k40wHhKR/Mubasshir-s-Photo.jpg"
+                  src="https://i.postimg.cc/4yLRv3LZ/Whats-App-Image-2025-06-13-at-16-09-28-4f0ea501-removebg-preview.png"
                   alt="Professional photo"
                   layout="fill"
                   objectFit="cover"
