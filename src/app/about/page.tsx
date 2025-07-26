@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Code, Briefcase, Heart } from 'lucide-react';
+import { GraduationCap, Code, Star } from 'lucide-react';
 
 export default function About() {
   return (
@@ -36,14 +36,18 @@ export default function About() {
           </div>
            <div>
             <h2 className="text-3xl font-headline font-semibold text-primary mb-3 flex items-center"><Code className="w-8 h-8 mr-3 text-accent" />My Skills</h2>
-            <p>
-              Through academic projects and self-learning, I have become familiar with testing APIs using Postman and developing robust solutions. I am eager to apply my skills and continue to grow in a professional software development environment, contributing to impactful and innovative projects.
-            </p>
+            <ul className="list-disc list-inside space-y-2">
+                <li>Backend Development with Python and Flask.</li>
+                <li>REST API design and integration.</li>
+                <li>Database management with SQL and MongoDB.</li>
+                <li>Familiarity with testing APIs using Postman.</li>
+                <li>Frontend development with HTML, CSS, and JavaScript.</li>
+            </ul>
           </div>
            <div>
-             <h2 className="text-3xl font-headline font-semibold text-primary mb-3 flex items-center"><Heart className="w-8 h-8 mr-3 text-accent" />My Interests</h2>
+             <h2 className="text-3xl font-headline font-semibold text-primary mb-3 flex items-center"><Star className="w-8 h-8 mr-3 text-accent" />My Strengths</h2>
             <p>
-              When I am not coding, you can find me exploring the great outdoors, experimenting with new recipes in the kitchen, or getting lost in a good book. These experiences fuel my creativity and provide fresh perspectives that I bring back to my professional work.
+              I am a quick learner, highly motivated, and thrive in collaborative environments. My problem-solving skills and attention to detail allow me to develop robust and efficient solutions. I am always eager to take on new challenges and grow as a developer.
             </p>
           </div>
         </div>
