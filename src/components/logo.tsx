@@ -27,7 +27,7 @@ export function Logo() {
           strokeLinejoin="round"
         />
       </svg>
-      <span className="font-headline font-bold text-xl">Persona Portfolio</span>
+      <span className="font-headline font-bold text-xl">Personal Portfolio</span>
     </div>
   );
 }

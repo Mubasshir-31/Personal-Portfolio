@@ -28,7 +28,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Persona Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Personal Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
