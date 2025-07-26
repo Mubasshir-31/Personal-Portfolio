@@ -17,9 +17,9 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 animate-fade-in">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-primary">Crafting Digital Experiences</h1>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-primary">Passionate Developer Eager to Build & Learn</h1>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Welcome to my portfolio. I'm a passionate developer and designer dedicated to building beautiful, functional, and user-centric web applications.
+              Welcome to my portfolio. As a recent graduate, I'm excited to apply my skills in building beautiful, functional, and user-centric web applications.
             </p>
             <div className="flex gap-4 pt-4">
               <Button asChild size="lg">
@@ -45,9 +45,9 @@ export default function Home() {
 
       <section id="skills" className="container mx-auto px-4 py-16 bg-secondary/30 rounded-lg">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">My Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">My Skill Set</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I specialize in a range of technologies to bring ideas to life, from concept to deployment.
+            I have a solid foundation in a range of technologies to bring ideas to life, from concept to deployment.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

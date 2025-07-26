@@ -45,8 +45,8 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <Card className="p-6">
                 <Award className="w-10 h-10 mx-auto text-accent mb-4" />
-                <h3 className="text-xl font-semibold text-primary">Experience</h3>
-                <p className="text-muted-foreground mt-2">5+ years in web development, creating solutions for a diverse range of clients.</p>
+                <h3 className="text-xl font-semibold text-primary">Project Experience</h3>
+                <p className="text-muted-foreground mt-2">Hands-on experience building applications from concept to deployment.</p>
             </Card>
             <Card className="p-6">
                 <Briefcase className="w-10 h-10 mx-auto text-accent mb-4" />
