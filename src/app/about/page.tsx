@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Code, Star } from 'lucide-react';
+import { GraduationCap, Code, Star, UserCircle2 } from 'lucide-react';
 
 export default function About() {
   return (
@@ -12,18 +11,8 @@ export default function About() {
 
       <div className="grid md:grid-cols-3 gap-12 items-start">
         <div className="md:col-span-1">
-          <Card className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
-            <CardContent className="p-0">
-              <div className="relative aspect-square">
-                 <Image
-                  src="https://i.postimg.cc/4yLRv3LZ/Whats-App-Image-2025-06-13-at-16-09-28-4f0ea501-removebg-preview.png"
-                  alt="Professional photo"
-                  layout="fill"
-                  objectFit="cover"
-                  data-ai-hint="professional portrait"
-                />
-              </div>
-            </CardContent>
+           <Card className="shadow-xl transform hover:scale-105 transition-transform duration-500 flex items-center justify-center aspect-square bg-secondary/30">
+            <UserCircle2 className="w-32 h-32 text-primary" />
           </Card>
         </div>
 

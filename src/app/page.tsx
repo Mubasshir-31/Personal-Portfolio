@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Laptop, Palette, ServerCog, BotMessageSquare } from 'lucide-react';
+import { Code, Laptop, Palette, ServerCog, BotMessageSquare, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,15 +30,8 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl">
-             <Image
-              src="https://i.postimg.cc/4yLRv3LZ/Whats-App-Image-2025-06-13-at-16-09-28-4f0ea501-removebg-preview.png"
-              alt="Hero image"
-              layout="fill"
-              objectFit="cover"
-              data-ai-hint="professional portrait"
-              className="transform hover:scale-105 transition-transform duration-500"
-            />
+          <div className="h-64 md:h-96 rounded-lg shadow-xl flex items-center justify-center bg-secondary/30 transform hover:scale-105 transition-transform duration-500">
+             <Briefcase className="w-32 h-32 text-primary" />
           </div>
         </div>
       </section>
