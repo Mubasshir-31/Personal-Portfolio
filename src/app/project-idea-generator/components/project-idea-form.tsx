@@ -51,14 +51,14 @@ export function ProjectIdeaForm() {
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
-      <Card className="shadow-lg">
+      <Card className="shadow-lg flex flex-col">
         <CardHeader>
           <CardTitle className="flex items-center gap-2"><Wand2 className="text-accent" /> Enter Technologies</CardTitle>
           <CardDescription>Enter a few technologies you're interested in, separated by commas.</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-grow flex flex-col">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex flex-col flex-grow">
               <FormField
                 control={form.control}
                 name="technologies"
@@ -75,7 +75,8 @@ export function ProjectIdeaForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" disabled={isLoading} className="w-full">
+              <div className="flex-grow" />
+              <Button type="submit" disabled={isLoading} className="w-full mt-auto">
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -90,12 +91,12 @@ export function ProjectIdeaForm() {
         </CardContent>
       </Card>
 
-      <Card className="shadow-lg">
+      <Card className="shadow-lg flex flex-col">
         <CardHeader>
           <CardTitle className="flex items-center gap-2"><Sparkles className="text-accent" /> AI-Generated Project Ideas</CardTitle>
           <CardDescription>Here are a few project ideas to inspire you.</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-grow">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
               <Loader2 className="w-12 h-12 animate-spin mb-4" />
