@@ -30,13 +30,13 @@ export default function About() {
         <div className="md:col-span-2 space-y-6 text-lg text-foreground/90">
           <h2 className="text-3xl font-headline font-semibold text-primary">My Story</h2>
           <p>
-            From a young age, I've been captivated by the intersection of technology and creativity. My journey into web development started not in a classroom, but from a place of curiosity, dismantling old electronics and trying to understand how things work. This curiosity evolved into a passion for building elegant, efficient, and impactful digital solutions.
+            From a young age, I have been captivated by the intersection of technology and creativity. My journey into web development started not in a classroom, but from a place of curiosity, dismantling old electronics and trying to understand how things work. This curiosity evolved into a passion for building elegant, efficient, and impactful digital solutions.
           </p>
           <p>
-            I believe that the best products are born from a deep understanding of user needs, coupled with a meticulous attention to detail. Whether it's writing clean, scalable code or designing an intuitive user interface, I strive for excellence in every aspect of my work.
+            I believe that the best products are born from a deep understanding of user needs, coupled with meticulous attention to detail. Whether it is writing clean, scalable code or designing an intuitive user interface, I strive for excellence in every aspect of my work.
           </p>
           <p>
-            When I'm not coding, you can find me exploring the great outdoors, experimenting with new recipes in the kitchen, or getting lost in a good book. These experiences fuel my creativity and provide fresh perspectives that I bring back to my professional work.
+            When I am not coding, you can find me exploring the great outdoors, experimenting with new recipes in the kitchen, or getting lost in a good book. These experiences fuel my creativity and provide fresh perspectives that I bring back to my professional work.
           </p>
         </div>
       </div>

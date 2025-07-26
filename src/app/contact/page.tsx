@@ -1,12 +1,8 @@
 'use client';
 
-import { Github, Linkedin, Mail, User, MessageSquare } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 
 export default function Contact() {
   return (
@@ -16,68 +12,34 @@ export default function Contact() {
         <p className="text-lg text-muted-foreground mt-2">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle>Send a Message</CardTitle>
+            <CardTitle>Contact Information</CardTitle>
           </CardHeader>
-          <CardContent>
-            <form className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <div className="relative flex items-center">
-                  <User className="absolute left-3 w-5 h-5 text-muted-foreground" />
-                  <Input id="name" placeholder="Your Name" className="pl-10" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <div className="relative flex items-center">
-                  <Mail className="absolute left-3 w-5 h-5 text-muted-foreground" />
-                  <Input id="email" type="email" placeholder="Your Email" className="pl-10" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <div className="relative">
-                  <MessageSquare className="absolute top-3 left-3 w-5 h-5 text-muted-foreground" />
-                  <Textarea id="message" placeholder="Your Message" className="pl-10" rows={5} />
-                </div>
-              </div>
-              <Button type="submit" className="w-full">Send Message</Button>
-            </form>
+          <CardContent className="space-y-4">
+            <Link href="mailto:mubasshirkhan9336@gmail.com" className="flex items-center gap-4 group">
+              <Mail className="w-6 h-6 text-accent" />
+              <span className="text-lg text-foreground group-hover:text-primary transition-colors">mubasshirkhan9336@gmail.com</span>
+            </Link>
           </CardContent>
         </Card>
 
-        <div className="space-y-6">
-           <Card>
-             <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-             </CardHeader>
-             <CardContent className="space-y-4">
-                 <Link href="mailto:mubasshirkhan9336@gmail.com" className="flex items-center gap-4 group">
-                    <Mail className="w-6 h-6 text-accent"/>
-                    <span className="text-lg text-foreground group-hover:text-primary transition-colors">mubasshirkhan9336@gmail.com</span>
-                </Link>
-             </CardContent>
-           </Card>
-           
-           <Card>
-             <CardHeader>
-                <CardTitle>Follow Me</CardTitle>
-             </CardHeader>
-             <CardContent className="flex justify-around">
-                 <Link href="https://github.com/Mubasshir-31" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
-                    <Github className="w-8 h-8"/>
-                    <span>GitHub</span>
-                </Link>
-                 <Link href="https://www.linkedin.com/in/mohd-mubasshir-khan-0553121bb/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
-                    <Linkedin className="w-8 h-8"/>
-                    <span>LinkedIn</span>
-                </Link>
-             </CardContent>
-           </Card>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle>Follow Me</CardTitle>
+          </CardHeader>
+          <CardContent className="flex justify-around items-center pt-2">
+            <Link href="https://github.com/Mubasshir-31" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary transition-colors">
+              <Github className="w-8 h-8" />
+              <span>GitHub</span>
+            </Link>
+            <Link href="https://www.linkedin.com/in/mohd-mubasshir-khan-0553121bb/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary transition-colors">
+              <Linkedin className="w-8 h-8" />
+              <span>LinkedIn</span>
+            </Link>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )

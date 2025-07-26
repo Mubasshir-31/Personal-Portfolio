@@ -8,11 +8,12 @@ import { Github } from 'lucide-react';
 const projects = [
   {
     title: 'Text-To-Speech',
-    description: 'A web application that converts written text into spoken words using HTML, CSS, and JavaScript. The project provides a user-friendly interface where users can input text and listen to it being read aloud, utilizing the browser\'s built-in speech synthesis capabilities.',
+    description: 'A web application that converts written text into spoken words using HTML, CSS, and JavaScript. This project provides a user-friendly interface to input text and listen to it being read aloud.',
     image: 'https://placehold.co/600x400.png',
     stack: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Mubasshir-31/Text-to-Speech.git',
+    aiHint: 'text speech'
   },
   {
     title: 'PromptDB Chatbot',
@@ -21,22 +22,25 @@ const projects = [
     stack: ['Python', 'Flask', 'MongoDB', 'OpenRouter AI', 'HTML', 'CSS', 'JS'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Mubasshir-31/PromptDB.git',
+    aiHint: 'chatbot interface'
   },
   {
     title: 'TechBlog Blog Website',
-    description: 'TechBlog is an auto-updating technology blog that delivers the latest tech news, trends, and innovations from around the world. Powered by Python, Flask, and MongoDB Atlas, the site fetches fresh content every hour using external APIs and presents it in a clean, responsive interface.',
+    description: 'An auto-updating technology blog that delivers the latest tech news. Powered by Python, Flask, and MongoDB, the site fetches fresh content hourly using external APIs and presents it in a clean, responsive interface.',
     image: 'https://placehold.co/600x400.png',
-    stack: ['Python', 'Flask', 'MongoDB Atlas', 'HTML', 'CSS', 'JavaScript', 'NewsData.io'],
+    stack: ['Python', 'Flask', 'MongoDB', 'HTML', 'CSS', 'JavaScript', 'NewsData.io'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Mubasshir-31/TechBlog.git',
+    aiHint: 'tech blog'
   },
    {
     title: 'PathGen-AI',
-    description: 'PathGen AI is the smart way to build roadmaps. Simply input your project goals and let our AI instantly generate a structured, professional, and easy-to-follow plan. Get from concept to completion with clarity and confidence.',
+    description: 'A smart way to build roadmaps. Simply input your project goals and let our AI instantly generate a structured, professional, and easy-to-follow plan to get from concept to completion with clarity.',
     image: 'https://placehold.co/600x400.png',
-    stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'GenerativeModel API'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'Generative AI'],
     liveUrl: '#',
     githubUrl: 'https://github.com/Mubasshir-31/PathGen-AI.git',
+    aiHint: 'roadmap plan'
   },
 ];
 
@@ -48,22 +52,22 @@ export default function Projects() {
         <p className="text-lg text-muted-foreground mt-2">A selection of projects that I'm proud of.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-           <Card key={project.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-2xl" style={{ animationDelay: `${index * 150}ms`, animationName: 'fade-in' }}>
+           <Card key={project.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-2xl" style={{ animationDelay: `${index * 150}ms`}}>
             <div className="relative h-48 w-full">
                <Image
                 src={project.image}
                 alt={project.title}
                 layout="fill"
                 objectFit="cover"
-                data-ai-hint="tech project"
+                data-ai-hint={project.aiHint}
                 className="transform hover:scale-105 transition-transform duration-500"
               />
             </div>
             <CardHeader>
               <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
-              <CardDescription className="text-sm line-clamp-3">{project.description}</CardDescription>
+              <CardDescription className="text-sm line-clamp-3 min-h-[60px]">{project.description}</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow py-2">
               <div className="flex flex-wrap gap-2">
@@ -72,7 +76,7 @@ export default function Projects() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-end gap-4 pt-4">
+            <CardFooter className="flex justify-end gap-4 pt-4 mt-auto">
               <Button variant="outline" size="sm" asChild>
                 <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <Github /> GitHub
