@@ -32,6 +32,14 @@ export function ProjectIdeaForm() {
     },
   });
 
+  const exampleTechnologies = ['Next.js', 'Genkit', 'Python', 'Firebase', 'Tailwind CSS', 'TypeScript'];
+
+  function handleExampleClick(tech: string) {
+    const currentTechs = form.getValues('technologies');
+    const newTechs = currentTechs ? `${currentTechs}, ${tech}` : tech;
+    form.setValue('technologies', newTechs);
+  }
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     setResult(null);
@@ -78,6 +86,24 @@ export function ProjectIdeaForm() {
                   </FormItem>
                 )}
               />
+
+              <div className="space-y-3 pt-4">
+                  <FormLabel>Or try an example</FormLabel>
+                  <div className="flex flex-wrap gap-2">
+                    {exampleTechnologies.map(tech => (
+                       <Button 
+                          key={tech}
+                          variant="outline" 
+                          size="sm"
+                          type="button" 
+                          onClick={() => handleExampleClick(tech)}
+                        >
+                          {tech}
+                       </Button>
+                    ))}
+                  </div>
+              </div>
+              
               <div className="flex-grow" />
               <Button type="submit" disabled={isLoading} className="w-full mt-auto">
                 {isLoading ? (
