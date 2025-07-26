@@ -15,7 +15,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
-  { href: '/skills-optimizer', label: 'AI Skills Optimizer', icon: <Bot className="w-4 h-4 ml-2 text-accent" /> },
+  { href: '/project-idea-generator', label: 'Project Idea Generator', icon: <Bot className="w-4 h-4 ml-2 text-accent" /> },
 ];
 
 export function Header() {
