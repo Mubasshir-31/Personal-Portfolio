@@ -7,36 +7,36 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce site with product management, shopping cart, and secure checkout functionalities.',
+    title: 'Text-To-Speech',
+    description: 'A web application that converts written text into spoken words using HTML, CSS, and JavaScript. The project provides a user-friendly interface where users can input text and listen to it being read aloud, utilizing the browser\'s built-in speech synthesis capabilities.',
     image: 'https://placehold.co/600x400.png',
-    stack: ['Next.js', 'React', 'TypeScript', 'Stripe', 'Firebase'],
+    stack: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Mubasshir-31/Text-to-Speech.git',
   },
   {
-    title: 'AI Content Generator',
-    description: 'A SaaS application that leverages generative AI to help users create marketing copy, blog posts, and social media updates.',
+    title: 'PromptDB Chatbot',
+    description: 'A smart AI-powered chatbot built with Python, Flask, OpenRouter, and MongoDB. It allows natural language queries like: "Show users from Delhi", "Add Raj, age 25, from Noida", "Update Rahul\'s age to 30"',
     image: 'https://placehold.co/600x400.png',
-    stack: ['React', 'Node.js', 'Express', 'Genkit AI', 'MongoDB'],
+    stack: ['Python', 'Flask', 'MongoDB', 'OpenRouter AI', 'HTML', 'CSS', 'JS'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Mubasshir-31/PromptDB.git',
   },
   {
-    title: 'Project Management Tool',
-    description: 'A collaborative tool for teams to manage tasks, track progress, and communicate effectively, inspired by Trello.',
+    title: 'TechBlog Blog Website',
+    description: 'TechBlog is an auto-updating technology blog that delivers the latest tech news, trends, and innovations from around the world. Powered by Python, Flask, and MongoDB Atlas, the site fetches fresh content every hour using external APIs and presents it in a clean, responsive interface.',
     image: 'https://placehold.co/600x400.png',
-    stack: ['Vue.js', 'Tailwind CSS', 'Supabase', 'GraphQL'],
+    stack: ['Python', 'Flask', 'MongoDB Atlas', 'HTML', 'CSS', 'JavaScript', 'NewsData.io'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Mubasshir-31/TechBlog.git',
   },
    {
-    title: 'Data Visualization Dashboard',
-    description: 'An interactive dashboard for visualizing complex datasets, with custom charts, filters, and data export options.',
+    title: 'PathGen-AI',
+    description: 'PathGen AI is the smart way to build roadmaps. Simply input your project goals and let our AI instantly generate a structured, professional, and easy-to-follow plan. Get from concept to completion with clarity and confidence.',
     image: 'https://placehold.co/600x400.png',
-    stack: ['D3.js', 'React', 'Python', 'Flask', 'PostgreSQL'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Python', 'GenerativeModel API'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Mubasshir-31/PathGen-AI.git',
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Projects() {
                   <Github /> GitHub
                 </Link>
               </Button>
-              <Button asChild>
+              <Button asChild disabled={project.liveUrl === '#'}>
                 <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink /> Live Demo
                 </Link>
