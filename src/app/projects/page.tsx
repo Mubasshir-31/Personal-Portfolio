@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'PromptDB Chatbot',
-    description: 'A smart AI-powered chatbot built with Python, Flask, OpenRouter, and MongoDB. It allows natural language queries like: "Show users from Delhi", "Add Raj, age 25, from Noida", "Update Rahul\'s age to 30"',
+    description: 'PromptDB is a powerful Python-based chatbot designed to bridge the gap between human language and database queries. Leveraging OpenRouter and MongoDB, it provides full CRUD functionality through a conversational interface. With robust session memory, dual logging for tracking every action, and a clean, timestamped chat UI, PromptDB offers a secure and efficient solution for managing your data without writing a single line of query code.',
     image: 'https://placehold.co/600x400.png',
     stack: ['Python', 'Flask', 'MongoDB', 'OpenRouter AI', 'HTML', 'CSS', 'JS'],
     liveUrl: '#',
