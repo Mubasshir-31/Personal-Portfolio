@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Mail, Twitter, User, MessageSquare } from 'lucide-react';
+import { Github, Linkedin, Mail, User, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -55,9 +55,9 @@ export default function Contact() {
                 <CardTitle>Contact Information</CardTitle>
              </CardHeader>
              <CardContent className="space-y-4">
-                 <Link href="mailto:hello@example.com" className="flex items-center gap-4 group">
+                 <Link href="mailto:mubasshirkhan9336@gmail.com" className="flex items-center gap-4 group">
                     <Mail className="w-6 h-6 text-accent"/>
-                    <span className="text-lg text-foreground group-hover:text-primary transition-colors">hello@example.com</span>
+                    <span className="text-lg text-foreground group-hover:text-primary transition-colors">mubasshirkhan9336@gmail.com</span>
                 </Link>
              </CardContent>
            </Card>
@@ -67,17 +67,13 @@ export default function Contact() {
                 <CardTitle>Follow Me</CardTitle>
              </CardHeader>
              <CardContent className="flex justify-around">
-                 <Link href="#" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
+                 <Link href="https://github.com/Mubasshir-31" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
                     <Github className="w-8 h-8"/>
                     <span>GitHub</span>
                 </Link>
-                 <Link href="#" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
+                 <Link href="https://www.linkedin.com/in/mohd-mubasshir-khan-0553121bb/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
                     <Linkedin className="w-8 h-8"/>
                     <span>LinkedIn</span>
-                </Link>
-                 <Link href="#" className="flex items-center gap-4 group flex-col text-muted-foreground hover:text-primary">
-                    <Twitter className="w-8 h-8"/>
-                    <span>Twitter</span>
                 </Link>
              </CardContent>
            </Card>

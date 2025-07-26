@@ -1,13 +1,12 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Logo } from './logo';
 
 export function Footer() {
   const socialLinks = [
-    { name: 'GitHub', icon: <Github className="h-5 w-5" />, url: '#' },
-    { name: 'LinkedIn', icon: <Linkedin className="h-5 w-5" />, url: '#' },
-    { name: 'Twitter', icon: <Twitter className="h-5 w-5" />, url: '#' },
+    { name: 'GitHub', icon: <Github className="h-5 w-5" />, url: 'https://github.com/Mubasshir-31' },
+    { name: 'LinkedIn', icon: <Linkedin className="h-5 w-5" />, url: 'https://www.linkedin.com/in/mohd-mubasshir-khan-0553121bb/' },
   ];
   return (
     <footer className="bg-secondary/30">
