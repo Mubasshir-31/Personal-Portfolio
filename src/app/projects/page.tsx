@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const projects = [
   {
@@ -48,10 +48,10 @@ export default function Projects() {
         <p className="text-lg text-muted-foreground mt-2">A selection of projects that I'm proud of.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
            <Card key={project.title} className="flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-2xl" style={{ animationDelay: `${index * 150}ms`, animationName: 'fade-in' }}>
-            <div className="relative h-56 w-full">
+            <div className="relative h-48 w-full">
                <Image
                 src={project.image}
                 alt={project.title}
@@ -62,25 +62,20 @@ export default function Projects() {
               />
             </div>
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">{project.title}</CardTitle>
-              <CardDescription className="text-base">{project.description}</CardDescription>
+              <CardTitle className="text-xl text-primary">{project.title}</CardTitle>
+              <CardDescription className="text-sm line-clamp-3">{project.description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow py-2">
               <div className="flex flex-wrap gap-2">
                 {project.stack.map(tech => (
-                  <Badge key={tech} variant="secondary" className="font-medium">{tech}</Badge>
+                  <Badge key={tech} variant="secondary" className="font-medium text-xs">{tech}</Badge>
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-end gap-4">
-              <Button variant="outline" asChild>
+            <CardFooter className="flex justify-end gap-4 pt-4">
+              <Button variant="outline" size="sm" asChild>
                 <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <Github /> GitHub
-                </Link>
-              </Button>
-              <Button asChild disabled={project.liveUrl === '#'}>
-                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink /> Live Demo
                 </Link>
               </Button>
             </CardFooter>
