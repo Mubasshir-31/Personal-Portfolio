@@ -17,7 +17,7 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 animate-fade-in">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-primary">Passionate Developer Eager to Build & Learn</h1>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-primary">Hi, I'm Mohd Mubasshir Khan</h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Welcome to my portfolio. As a recent graduate, I'm excited to apply my skills in building beautiful, functional, and user-centric web applications.
             </p>
