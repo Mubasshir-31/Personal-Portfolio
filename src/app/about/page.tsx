@@ -16,7 +16,7 @@ export default function About() {
             <CardContent className="p-0">
               <div className="relative aspect-square">
                  <Image
-                  src="https://placehold.co/400x400.png"
+                  src="https://i.postimg.cc/k40wHhKR/Mubasshir-s-Photo.jpg"
                   alt="Professional photo"
                   layout="fill"
                   objectFit="cover"

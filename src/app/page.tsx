@@ -32,11 +32,11 @@ export default function Home() {
           </div>
           <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl">
              <Image
-              src="https://placehold.co/600x400.png"
+              src="https://i.postimg.cc/k40wHhKR/Mubasshir-s-Photo.jpg"
               alt="Hero image"
               layout="fill"
               objectFit="cover"
-              data-ai-hint="abstract geometric"
+              data-ai-hint="professional portrait"
               className="transform hover:scale-105 transition-transform duration-500"
             />
           </div>
