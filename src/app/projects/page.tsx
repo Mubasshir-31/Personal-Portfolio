@@ -65,6 +65,9 @@ export default function Projects() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-end gap-4 pt-4 mt-auto">
+               <Button variant="outline" size="sm" disabled>
+                  Live Demo
+                </Button>
               <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm">
                   <Github /> GitHub
